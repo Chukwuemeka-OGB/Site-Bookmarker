@@ -56,8 +56,16 @@ function deleteBookmark(url){
     let bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
     // loop through bookmarks 
     bookmarks.forEach((bookmark, index)=>{
-        if(bookmark.url === url){
-            bookmarks.splice(index, 1); //splice from bookmarks array
+
+        if (bookmark.url === url) {
+            const confirmation = confirm(`Confirm removal of the site entry "${bookmark.name}"`);
+    
+            if (confirmation) {
+                bookmarks.splice(index, 1); //splice from bookmarks array
+            } else {
+                // User clicked "Cancel," do nothing
+                return;
+            }
         }
     });
     //reset locale storage
