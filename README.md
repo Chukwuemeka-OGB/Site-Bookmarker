@@ -1,2 +1,3 @@
 # Site-Bookmarker
 A project I made after relearning Javascript Fundamentals. It makes use of localestorage to store and the names and url of Inputed sites. It is properly validated and can visit inputted sites or clear it from localestorage via the respective buttons
+Note: It won't receive an entry if it's not formatted in it's respective input type. It fetches and displays the site data from localestorage to the DOM. and on click of the delete button it clears/splices that particular site out of localestorage and the DOM as well. ON clicking the visit button it sends you to the particular site bookmarked via the url.
